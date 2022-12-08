@@ -1,9 +1,12 @@
+import { useCrypto } from "../hooks/useCrypto";
+
 type Props = {
     image: string;
 };
 
 export default function CryptoImage({ image }: Props) {
-  return (
+  const { loading } = useCrypto()
+  return !loading && (
     <img className="w-full" src={image} />
   )
 }

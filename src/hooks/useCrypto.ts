@@ -64,10 +64,6 @@ export const useCrypto = () => {
       });
   };
 
-  useEffect(() => {
-    fetchMarket();
-  }, []);
-
   return {
     cryptoList,
     loading,
@@ -80,5 +76,6 @@ export const useCrypto = () => {
     orderByOptions,
     priceChangePercentageOptions,
     onSelectPriceChangePercentage,
+    fetchMarket
   };
 };
